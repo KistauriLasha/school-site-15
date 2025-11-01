@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Школы</title>
+    <!-- Подключаем Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключаем шрифт Inter --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Применяем шрифт Inter ко всему сайту */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Устанавливаем темно-красный/коричневый фон и желтый текст */
+            @apply bg-stone-800 text-yellow-400; /* Фон как на фото, текст желтый */
+        }
+        /* Стили для активной ссылки в шапке */
+        .nav-link.active {
+            @apply bg-stone-700 text-yellow-200;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Шапка сайта --><header class="bg-stone-900 border-b border-stone-700 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Левая часть: Название сайта --><div class="flex-shrink-0">
+                    <a href="#" class="text-lg sm:text-xl font-bold text-yellow-300">
+                        Средняя школа №15 им А.К. Назадзе
+                    </a>
+                </div>
+
+                <!-- Правая часть: Навигация --><div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a id="link-school" href="#school" class="nav-link active text-yellow-400 hover:bg-stone-700 hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Школа
+                        </a>
+                        <a id="link-cameras" href="#cameras" class="nav-link text-yellow-400 hover:bg-stone-700 hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Камеры
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Кнопка мобильного меню --><div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-stone-800 inline-flex items-center justify-center p-2 rounded-md text-yellow-400 hover:text-yellow-200 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-stone-800 focus:ring-yellow-300" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Открыть меню</span>
+                        <!-- Иконка "бургер" --><svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Иконка "крестик" (скрыта) --><svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Мобильное меню --><div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#school" data-target="school" class="mobile-nav-link active text-yellow-400 hover:bg-stone-700 hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">
+                    Школа
+                </a>
+                <a href="#cameras" data-target="cameras" class="mobile-nav-link text-yellow-400 hover:bg-stone-700 hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">
+                    Камеры
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент --><main class="flex-grow">
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="px-4 py-6 sm:px-0">
+                <!-- КОНТЕЙНЕР ДЛЯ ШКОЛЫ -->
+                <div id="content-school" class="content-section border-4 border-dashed border-stone-600 rounded-lg bg-stone-700 flex flex-col items-start p-6 md:p-10 text-left space-y-8">
+                    
+                    <!-- Подзаголовок: ШКОЛА --><h2 class="text-3xl sm:text-4xl font-extrabold text-yellow-300 uppercase tracking-widest">
+                        ШКОЛА
+                    </h2>
+                    <!-- Приветственный текст --><p class="text-lg leading-relaxed text-yellow-400 max-w-2xl">
+                        Мы рады приветствовать вас на официальном сайте Средней школы №15 имени Александры Константиновны Назадзе. Наша школа – это не просто образовательное учреждение, это дружная семья с богатой историей, где каждый ученик и учитель – уникальная личность.
+                    </p>
+                    <!-- Абзац о А.К. Назадзе --><p class="text-lg leading-relaxed text-yellow-400 max-w-2xl">
+                        Школа носит имя героя Великой Отечественной войны Александры Константиновны Назадзе. В её честь на первом этаже школы стоит бюст героя.
+                    </p>
+                    
+                    <!-- Подзаголовок: НАША ЦЕЛЬ --><h3 class="text-2xl sm:text-3xl font-extrabold text-yellow-300 uppercase tracking-widest pt-4">
+                        НАША ЦЕЛЬ
+                    </h3>
+                    
+                    <!-- Текст о целях и маркированный список --><p class="text-lg leading-relaxed text-yellow-400 max-w-2xl mb-4">
+                        Наша главная цель – создание комфортной и мотивирующей среды для всестороннего развития личности. Мы стремимся:
+                    </p>
+                    
+                    <ul class="list-disc list-inside space-y-2 text-lg leading-relaxed text-yellow-400 ml-4">
+                        <li class="pl-2">Дать прочные и актуальные знания, необходимые для успешного поступления в вузы и самореализации в современном мире.</li>
+                        <li class="pl-2">Воспитать ответственных граждан, уважающих историю, культуру и традиции нашей страны.</li>
+                        <li class="pl-2">Раскрыть потенциал каждого ребёнка через индивидуальный подход, внеклассную деятельность и проектную работу.</li>
+                    </ul>
+
+                    <!-- Добавленный подзаголовок: НАШИ ДОСТОИНСТВА --><h3 class="text-2xl sm:text-3xl font-extrabold text-yellow-300 uppercase tracking-widest pt-4">
+                        НАШИ ДОСТОИНСТВА
+                    </h3>
+                    
+                    <!-- Достоинства -->
+                    <ul class="list-disc list-inside space-y-2 text-lg leading-relaxed text-yellow-400 ml-4">
+                        <li class="pl-2">Опытный педагогический состав: Наши учителя – это профессионалы, постоянно повышающие свою квалификацию и применяющие современные методики преподавания.</li>
+                        <li class="pl-2">Современная спортплощадка, созданная РосАтомом, благодаря которой дети с удовольствием проводят уроки физкультуры и досуг на переменах.</li>
+                        <li class="pl-2">Школа №15 города Сухум славится большим количеством наград в спортивных мероприятиях, а также победителями в предметных школьных олимпиадах Республики Абхазия.</li>
+                    </ul>
+                </div>
+
+                <!-- КОНТЕЙНЕР ДЛЯ КАМЕРЫ (ПУСТОЙ) -->
+                <div id="content-cameras" class="content-section hidden border-4 border-dashed border-stone-600 rounded-lg bg-stone-700 flex flex-col items-start p-6 md:p-10 text-left space-y-8 min-h-[50vh]">
+                    <!-- Здесь будет контент для Камер, пока пусто -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал (пустой) --><footer class="bg-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center h-16">
+                <!-- Здесь мог бы быть текст подвала --></div>
+        </div>
+    </footer>
+
+    <script>
+        // Скрипт для переключения мобильного меню
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icons = menuButton.querySelectorAll('svg');
+            
+            // Получаем все ссылки навигации и контейнеры контента
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // 1. Функция переключения вкладок
+            function switchTab(targetId) {
+                // Скрываем все разделы
+                contentSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                
+                // Показываем целевой раздел
+                const targetSection = document.getElementById('content-' + targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+
+                // Обновляем активное состояние ссылок
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + targetId || link.getAttribute('data-target') === targetId) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Обновляем URL (для сохранения состояния при перезагрузке)
+                history.pushState(null, '', '#' + targetId);
+            }
+
+            // 2. Обработчики кликов для навигации
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const targetId = link.getAttribute('href').substring(1) || link.getAttribute('data-target');
+                    switchTab(targetId);
+
+                    // Скрываем мобильное меню после клика
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuButton.setAttribute('aria-expanded', 'false');
+                        icons[0].classList.remove('hidden');
+                        icons[1].classList.add('hidden');
+                    }
+                });
+            });
+
+            // 3. Обработчик для мобильного меню (бургер)
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                icons[0].classList.toggle('hidden'); // "бургер"
+                icons[1].classList.toggle('hidden'); // "крестик"
+            });
+            
+            // 4. Инициализация: проверка хеша URL при загрузке
+            const initialHash = window.location.hash.substring(1);
+            if (initialHash && document.getElementById('content-' + initialHash)) {
+                switchTab(initialHash);
+            } else {
+                // По умолчанию открываем "Школа"
+                switchTab('school');
+            }
+        });
+    </script>
+
+</body>
+</html>
